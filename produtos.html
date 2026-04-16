@@ -2,86 +2,136 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Grade de Produtos</title>
+  <title>Catálogo Glade</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      padding: 40px;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 24px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.15s;
-    }
-    .card:hover {
-      transform: translateY(-6px) scale(1.025);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.09);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 18px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .card-title {
-      font-size: 1.15rem;
-      font-weight: bold;
-      margin: 0 0 8px 0;
-    }
-    .card-desc {
-      color: #444;
-      font-size: 1rem;
+      background: #f5f9fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
+      padding: 32px;
+    }
+    h1 {
+      text-align: center;
+      color: #35454e;
+      margin-bottom: 38px;
+    }
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+    .produto-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(50,60,70,0.08);
+      width: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-align: center;
+      padding-bottom: 16px;
+    }
+    .produto-card:hover {
+      transform: translateY(-4px) scale(1.018);
+      box-shadow: 0 6px 24px rgba(50,70,100,0.13);
+    }
+    .produto-img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      margin-top: 22px;
+      margin-bottom: 12px;
+      background: #f3f7fa;
+      border-radius: 8px;
+    }
+    .produto-titulo {
+      font-size: 1.13rem;
+      color: #35454e;
+      margin-bottom: 7px;
+      font-weight: 600;
+    }
+    .produto-desc {
+      color: #697880;
+      font-size: 0.96rem;
+      margin: 0 18px 14px 18px;
+      min-height: 40px;
+    }
+    .produto-link {
+      display: inline-block;
+      font-size: 0.97rem;
+      color: #0093a3;
+      background: #e6fafb;
+      border-radius: 4px;
+      padding: 6px 20px;
+      margin-top: 7px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .produto-link:hover {
+      background: #c5eff5;
+    }
+    @media (max-width: 800px) {
+      .produto-card {
+        width: 95vw;
+        max-width: 340px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="product-grid">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?shoes" alt="Tênis Esportivo">
-      <div class="card-content">
-        <div class="card-title">Tênis Esportivo</div>
-        <div class="card-desc">Conforto e estilo para os seus treinos diários.</div>
-      </div>
+  <h1>Catálogo Glade</h1>
+  <div class="catalogo">
+    <div class="produto-card">
+      <img class="produto-img" src="https://www.glade.com.br/-/media/Project/SCJohnson/Glade/BRAZIL/Product-Images/Sprays/Glade-Aerosol/Glade-Aerosol-BR-Lavanda.png"
+        alt="Glade Aerossol Lavanda">
+      <div class="produto-titulo">Glade Aerossol Lavanda</div>
+      <div class="produto-desc">Spray para perfumar o ambiente com a fragrância calmante de lavanda.</div>
+      <a class="produto-link" href="https://www.glade.com/pt-br/products/sprays/" target="_blank">Ver mais</a>
     </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?headphones" alt="Fones de Ouvido">
-      <div class="card-content">
-        <div class="card-title">Fones de Ouvido</div>
-        <div class="card-desc">Qualidade de som incomparável e tecnologia sem fio.</div>
-      </div>
+    <div class="produto-card">
+      <img class="produto-img" src="https://www.glade.com.br/-/media/Project/SCJohnson/Glade/BRAZIL/Product-Images/Diffuser/Diffuser-BR-Lavanda.png"
+        alt="Glade Difusor de Ambiente Lavanda">
+      <div class="produto-titulo">Glade Difusor Lavanda</div>
+      <div class="produto-desc">Difusor que libera fragrância contínua e delicada para o seu espaço.</div>
+      <a class="produto-link" href="https://www.glade.com/pt-br/products/home-fragrance/" target="_blank">Ver mais</a>
     </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?watch" alt="Relógio Inteligente">
-      <div class="card-content">
-        <div class="card-title">Relógio Inteligente</div>
-        <div class="card-desc">Monitore sua saúde, notificações e muito mais.</div>
-      </div>
+    <div class="produto-card">
+      <img class="produto-img" src="https://www.glade.com.br/-/media/Project/SCJohnson/Glade/BRAZIL/Product-Images/Oil-Gels/Gel-Ambiente-BR-Lavanda.png"
+        alt="Glade Gel Pequenos Ambientes Lavanda">
+      <div class="produto-titulo">Glade Gel Lavanda</div>
+      <div class="produto-desc">Ideal para pequenos ambientes, perfumando de forma prática e eficiente.</div>
+      <a class="produto-link" href="https://www.glade.com/pt-br/products/oils-gels/all" target="_blank">Ver mais</a>
     </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?backpack" alt="Mochila Executiva">
-      <div class="card-content">
-        <div class="card-title">Mochila Executiva</div>
-        <div class="card-desc">Design moderno e espaço para todos os seus itens.</div>
-      </div>
+    <div class="produto-card">
+      <img class="produto-img" src="https://www.glade.com.br/-/media/Project/SCJohnson/Glade/BRAZIL/Product-Images/Liquids/Liquido-Gotas-Perfumadas-BR.png"
+        alt="Glade Gotas Perfumadas">
+      <div class="produto-titulo">Glade Gotas Perfumadas</div>
+      <div class="produto-desc">Gotas para deixar o ambiente perfumado do seu jeito, com fragrâncias variadas.</div>
+      <a class="produto-link" href="https://www.glade.com/pt-br/products/liquids/" target="_blank">Ver mais</a>
     </div>
-    <!-- Adicione mais cards conforme necessário -->
+    <div class="produto-card">
+      <img class="produto-img" src="https://www.glade.com.br/-/media/Project/SCJohnson/Glade/BRAZIL/Product-Images/Car/Glade-Car-BR-Acqua.png"
+        alt="Glade Auto Sport Acqua">
+      <div class="produto-titulo">Glade Auto Sport Acqua</div>
+      <div class="produto-desc">Aromatizador automotivo para deixar seu carro sempre cheiroso.</div>
+      <a class="produto-link" href="https://www.glade.com/pt-br/products/car/" target="_blank">Ver mais</a>
+    </div>
+    <div class="produto-card">
+      <img class="produto-img" src="https://www.glade.com.br/-/media/Project/SCJohnson/Glade/BRAZIL/Product-Images/Toque/Toque-De-Frescor-BR-Lavanda.png"
+        alt="Glade Toque de Frescor Lavanda">
+      <div class="produto-titulo">Glade Toque de Frescor</div>
+      <div class="produto-desc">Praticidade para perfumar o ambiente a cada toque, com refis diversos.</div>
+      <a class="produto-link" href="https://www.glade.com/pt-br/products/sprays/" target="_blank">Ver mais</a>
+    </div>
+    <div class="produto-card">
+      <img class="produto-img" src="https://www.glade.com.br/-/media/Project/SCJohnson/Glade/BRAZIL/Product-Images/Candles/Candle-BR-Lavanda.png"
+        alt="Glade Vela Aromática Lavanda">
+      <div class="produto-titulo">Glade Vela Aromática</div>
+      <div class="produto-desc">Vela aromática para perfumar e decorar ambientes com elegância.</div>
+      <a class="produto-link" href="https://www.glade.com/pt-br/products/home-fragrance/all" target="_blank">Ver mais</a>
+    </div>
   </div>
 </body>
 </html>
